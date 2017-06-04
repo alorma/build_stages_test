@@ -1,0 +1,14 @@
+language: bash
+branches:
+  only:
+    - master
+    - /^v\d+\.\d+\.\d+$/
+
+jobs:
+  include:
+    - stage: Build
+      script: ./scripts/build.sh
+    - stage: Check
+      script: ./scripts/check.sh
+    - stage: Deploy
+      script: ./scripts/deploy.sh
