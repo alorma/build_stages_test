@@ -4,7 +4,7 @@ branches:
     - master
     - /^v\d+\.\d+\.\d+$/
 
-job:
+jobs:
   include:
     - stage: Build
       script: ./scripts/build.sh
