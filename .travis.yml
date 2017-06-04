@@ -1,0 +1,10 @@
+language: bash
+
+job:
+  include:
+    - stage: Build
+      script: ./scripts/build.sh
+    - stage: Check
+      script: ./scripts/check.sh
+    - stage: Deploy
+      script: ./scripts/deploy.sh
