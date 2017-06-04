@@ -11,4 +11,6 @@ jobs:
     - stage: Check
       script: ./scripts/check.sh
     - stage: Deploy
-      script: ./scripts/deploy.sh
+      deploy:
+        - provider: script
+          script: ./scripts/deploy.sh
